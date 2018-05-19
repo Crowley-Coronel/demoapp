@@ -1,0 +1,73 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-calm">
+    
+    <!-- style attribute for Android -->
+    <h1 class="title" style="text-align:center!important;">Registrarse</h1>
+    
+    <!-- Button left -->
+    <button class="button button-icon button-clear button-light ion-ios-arrow-thin-left" ng-click="closeRegister()"></button>
+    
+    <!-- Button right [empty] -->
+    <button class="button button-icon button-clear button-light"></button>
+  
+  </ion-header-bar>
+
+  <ion-content scroll="false">
+    <div class="list">
+      <!--
+      <label class="item item-input">
+        <i class="icon ion-ios-person-outline placeholder-icon-large"></i>
+        <input type="text" placeholder="Nom">
+      </label>
+      -->
+      <label class="item item-input">
+        <i class="icon ion-person placeholder-icon-large"></i>
+        <input type="text" placeholder="Nombres" ng-model="registro.nombres">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-android-contact placeholder-icon-large"></i>
+        <input type="number" placeholder="Edad" ng-model="registro.edad">
+      </label>
+       <label class="item item-input">
+        <i class="icon ion-ios-telephone placeholder-icon-large"></i>
+        <input type="tel" placeholder="Telefono" ng-model="registro.telefono">
+      </label>
+       <label class="item item-input">
+        <i class="icon ion-ios-email-outline placeholder-icon-large"></i>
+        <input type="email" placeholder="Correo" ng-model="registro.correo">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-android-lock placeholder-icon-large"></i>
+        <input type="password" placeholder="Contraseña" ng-model="registro.password">
+      </label>
+        <label class="item item-input item-select">
+    <div class="input-label">
+      Tipo de cuenta
+    </div>
+    <select ng-model="registro.cuenta">
+      <option>Ahorro</option>
+      <option>Bancaria</option>
+      
+    </select>
+
+
+     <!--
+      <label class="item item-input">
+        <i class="icon ion-ios-locked-outline placeholder-icon-large"></i>
+        <input type="text" placeholder="Confirmer mot de passe">
+      </label>
+      -->
+    </div>
+
+    <p class="calm text-center">
+      Al presionar el boton "Enviar" acepta los terminos y condiciones
+    </p>
+    <p class="assertive text-center" ng-if="error"><strong>{{ error }}</strong></p>
+
+    <div class="center">
+      <button class="button button-balanced" ng-click="registrar(registro)">
+        Enviar
+      </button>
+    </div>
+  </ion-content>
+</ion-modal-view>

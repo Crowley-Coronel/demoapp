@@ -1,0 +1,36 @@
+
+<ion-view view-title="Historial">
+  <ion-content>
+  	<ion-refresher on-refresh="refrescar()"></ion-refresher>
+    <ion-list can-swipe="listCanSwipe" ng-if="local">
+      <ion-item ng-repeat="movimiento in movimientos">
+        {{movimiento.concepto}} {{movimiento.id}} {{movimiento.monto}}
+       
+    <ion-option-button class="button-info" ng-click="edit(movimiento.id)">
+      Detalles
+    </ion-option-button>
+     
+      </ion-item>
+    </ion-list>
+
+    <ion-list ng-if="remote">
+     
+        
+       
+   <div class="card" ng-repeat="movimiento in movimientos">
+  <div class="item item-text-wrap">
+ {{movimiento.concepto}} <br>
+ {{movimiento.id_cliente}}
+  </div>
+</div>
+ 
+    </ion-list>
+
+
+<div class="card" ng-if="verMensaje">
+  <div class="item item-text-wrap">
+    {{mensaje}}
+  </div>
+</div>
+  </ion-content>
+</ion-view>

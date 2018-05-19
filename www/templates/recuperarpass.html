@@ -1,0 +1,42 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-calm">
+
+    <!-- style attribute for Android -->
+    <h1 class="title" style="text-align:center!important;">Reestablecer contraseña</h1>
+
+    <!-- Button left -->
+    <button class="button button-icon button-clear button-light ion-ios-arrow-thin-left" ng-click="closeRecuperacion()"></button>
+
+    <!-- Button right [empty] -->
+    <button class="button button-icon button-clear button-light"></button>
+
+  </ion-header-bar>
+
+  <ion-content scroll="false">
+
+         <form name="myForm" novalidate>
+        <div class="list list-inset center">
+          <label class="item item-input bar">
+            <i class="icon ion-ios-email-outline placeholder-icon-large"></i>
+            <input name="username" type="email" placeholder="Mail" ng-model="usuario.email" required >
+          </label>
+      
+        </div>
+        
+           <!-- Connexion button -->
+        <div text-center>
+        <a class="button button-block button-calm small" ng-disabled="myForm.$invalid" ng-click="recuperarPass(usuario)">
+          Enviar
+        </a>
+      </div>
+
+     
+      </form>
+
+       <p class="calm text-center">
+     ¿Olvidaste tu contraseña?<br/>Introduce tu correo electronico para reestablecerla!
+    </p>
+
+
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,43 @@
+<ion-view view-title="Movimientos">
+  <ion-content>
+
+ 
+  	<ion-item ng-if="!nuevoMovimiento">
+      	 <button class="button button-block button-calm" ng-click="crearMovimiento()">Nuevo Movimiento</button>
+      </ion-item>
+
+   
+
+<div class="list" ng-if="nuevoMovimiento">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Movimiento
+    </div>
+    <select ng-model="movimiento.tipo">
+      <option>Retiro</option>
+      <option>Deposito</option>
+      
+    </select>
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Concepto</span>
+    <input type="text" ng-model="movimiento.concepto">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Monto</span>
+    <input type="text" ng-model="movimiento.monto">
+  </label>
+   <button class="button button-block button-outline button-balanced" ng-click="realizar()">Realizar Movimiento</button>
+
+</div>
+
+
+
+
+
+
+
+
+  </ion-content>
+</ion-view>

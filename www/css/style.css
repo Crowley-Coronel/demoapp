@@ -1,0 +1,52 @@
+.avatar {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.background-login {
+
+
+  /*background-image:url(../img/background_1.jpeg);*/
+  background-color: #132043;
+  
+  background-position: center top;
+  background-size: auto 100%;
+  /*
+  -webkit-filter: grayscale(100%);
+  */
+}
+
+ .center{
+ 	width: 90%;
+ 	display: block;
+  	text-align:center;
+  	 margin-left:auto;
+  margin-right:auto;
+  font-size: 12px;
+ }
+
+ .small{
+ 	width: 80%;
+ 	display: block;
+  	text-align:center;
+  	 margin-left:auto;
+  margin-right:auto;
+  font-size: 15px;
+ }
+
+ .placeholder-icon-large {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.mensaje-error{
+ 	
+ 	display: block;
+  	text-align:center;
+  	 margin-left:auto;
+  margin-right:auto;
+  font-size: 13px;
+  color: #8F2121;
+ }

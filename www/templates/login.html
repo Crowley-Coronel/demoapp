@@ -1,0 +1,55 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="background-login">
+    <br>
+    <br>
+    <img src="img/ionic.png" class="avatar">
+    <br>
+   <div class="row row-center center-content">
+      <div class="col col-center">
+
+        <!-- Form -->
+      <form name="myForm" novalidate>
+        <div class="list list-inset center">
+          <label class="item item-input bar">
+            <i class="icon ion-ios-email-outline placeholder-icon-large"></i>
+            <input name="username" type="email" placeholder="Mail" ng-model="usuario.email" required ng-minlength="10">
+          </label>
+          <label class="item item-input bar">
+            <i class="icon ion-ios-locked-outline placeholder-icon-large"></i>
+            <input name="password" type="password" placeholder="Contraseña" ng-model="usuario.password" required ng-minlength="10" >
+          </label>
+        </div>
+        
+          <div class="padding mensaje-error">
+            <p ng-show="myForm.username.$invalid && !myForm.username.$pristine">Introduce tu correo</p>
+            <p ng-show="myForm.password.$error.required">Introduce tu password</p>
+           
+        </div>
+
+           <!-- Connexion button -->
+        <div text-center>
+        <a class="button button-block button-positive small" ng-disabled="myForm.$invalid" ng-click="submit(usuario)">
+          Iniciar Sesion
+        </a>
+      </div>
+
+     
+      </form>
+         <div class="center">
+        <a href="" ng-click="openRegister()">Registrarse</a>
+        <br>
+        <br>
+        <a href="" ng-click="openRecuperacion()">¿Olvidó su Contraseña?</a>
+      </div>
+     
+
+
+        
+      </div>
+    </div>
+
+ 
+
+
+  </ion-content>
+</ion-view>
