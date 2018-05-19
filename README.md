@@ -1,6 +1,6 @@
 ## APLICACIÓN DEMO
 
-_Despues de bajar el repositorio, ejecutar en terminal lo siguiente:
+Despues de bajar el repositorio, ejecutar en terminal lo siguiente:
 
 *$npm install
 *ionic cordova platform add android
