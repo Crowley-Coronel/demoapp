@@ -467,11 +467,18 @@ Movimientos.iniDB();
 
 })
 
-.controller('promocionesCtrl', function($scope, $stateParams,checkActivo,url) {
+.controller('promocionesCtrl', function($scope,url,$sce) {
  
+
+ $scope.trustSrc = function(src) {
+    return $sce.trustAsResourceUrl(src);
+  }
+
  // checkActivo.stop();
-$scope.imagen = url.promocion();
-console.log($scope.imagen);
+var link = url.promocion();
+$scope.promo = {src: link, titulo:"Promo template"}
+
+
 
 })
 

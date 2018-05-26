@@ -92,7 +92,7 @@ angular.module('demoApp.services', [])
   //var urlPromo = "http://localhost/demoapp/uploads/promocion.png";
   //var url = "http://192.168.1.114/demoapp/api/mobile";
   var url = "http://dim3nsoft.com/demoapp/api/mobile"; 
-  var urlPromo = "http://dim3nsoft.com/demoapp/uploads/promocion.png";
+  var urlPromo = "http://dim3nsoft.com/demoapp/cuentas/";
   
   this.apiRegistro = function (){
     
@@ -143,7 +143,7 @@ angular.module('demoApp.services', [])
 
     this.promocion = function() {
      
-     return urlPromo;
+     return urlPromo+"promo.html";
 
 
     }
